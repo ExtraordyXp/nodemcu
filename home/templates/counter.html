@@ -1,0 +1,32 @@
+{% block counter %}
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">counter</h4>
+        <p class="card-text">esp35 posting</p>
+
+        <div class="container">
+            <form action="{% url 'passtocountingview' %}" method="GET">
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+                    <div class="col-sm-1-12">
+                        <input type="number" class="form-control" name="inputNumber" id="inputName" placeholder="" value="0">
+                    </div>
+                </div>
+                <fieldset class="form-group row">
+                    <legend class="col-form-legend col-sm-1-12">{{savecount.esp_result}}</legend>
+                    <div class="col-sm-1-12">
+                        
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Action</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock counter%}
